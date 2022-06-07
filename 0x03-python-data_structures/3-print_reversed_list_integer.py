@@ -2,5 +2,7 @@
 def print_reversed_list_integer(my_list=[]):
     if my_list == []:
         return
-    for i in range(len(my_list)-1, -1, -1):
-        print(my_list[i])
+    else:
+        my_list.reverse()
+        for i in my_list:
+            print("{:d}".format(i))
