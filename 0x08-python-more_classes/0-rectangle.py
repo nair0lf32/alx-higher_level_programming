@@ -2,7 +2,7 @@
 """class Rectangle."""
 
 
-class Rectangle:
+class Rectangle():
     """A Rectangle."""
 
     pass
