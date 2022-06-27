@@ -99,6 +99,6 @@ class Rectangle():
     def square(cls, size=0):
         """Returns a square.
         Args:
-            size (int): The width and height of the square.
+            size (int): The size of the square.
         """
         return (cls(size, size))
