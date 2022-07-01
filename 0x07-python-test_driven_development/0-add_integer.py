@@ -5,7 +5,7 @@
 def add_integer(a, b=98):
     """Return the sum of a and b.
         Raises:
-            TypeError: If a or b is neither 
+            TypeError: If a or b is neither
             an int nor a float.
     """
     if not (isinstance(a, (int, float))):
