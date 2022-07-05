@@ -10,6 +10,7 @@ load_ = __import__('6-load_from_json_file').load_from_json_file
 def read_add_save():
     """adds all arguments to a Python list,
         and then save them to a file"""
+
     filename = "add_item.json"
     args_list = []
     if os.path.exists(filename):
