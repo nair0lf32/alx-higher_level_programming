@@ -2,6 +2,7 @@
 """read add then save to json file"""
 import json
 import sys
+import os.path
 save_ = __import__('5-save_to_json_file').save_to_json_file
 load_ = __import__('6-load_from_json_file').load_from_json_file
 
@@ -11,6 +12,8 @@ def read_add_save():
     and then save them to a file"""
     args = load_("add_item.json")
     args = []
+    if os.path.exists(filename):
+        args = load_(filename)
     args.extend(sys.argv[1:])
     save_(args, "add_item.json")
 
