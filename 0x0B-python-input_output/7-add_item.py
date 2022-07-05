@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 """read add then save to json file"""
+import json
 import sys
 
 
@@ -13,7 +14,7 @@ def read_add_save():
     except FileNotFoundError:
         args = []
     args.extend(sys.argv[1:])
-    return save_(args, "add_item.json")
+    save_(args, "add_item.json")
 
 
 if __name__ == "__main__":
