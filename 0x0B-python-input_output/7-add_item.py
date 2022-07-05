@@ -13,7 +13,7 @@ def read_add_save():
     except FileNotFoundError:
         args = []
     args.extend(sys.argv[1:])
-    save_(args, "add_item.json")
+    return save_(args, "add_item.json")
 
 
 if __name__ == "__main__":
