@@ -1,2 +1,2 @@
 --  lists the number of records with the same score in the table second_table of the database hbtn_0c_0
-SELECT COUNT(score) FROM second_table WHERE score = (SELECT AVG(score) FROM second_table);
+SELECT COUNT(score) as 'number' FROM second_table GROUP BY score ORDER BY score DESC;
