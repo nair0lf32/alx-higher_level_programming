@@ -10,6 +10,7 @@ if __name__ == "__main__":
     db = sys.argv[3]
     conn = MySQLdb.connect(user=user, passwd=pwd, db=db)
     csr = conn.cursor()
-    csr.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id ASC")
+    csr.execute("SELECT * FROM states WHERE name LIKE BINARY 'N%' \
+        ORDER BY states.id ASC")
     for state in csr.fetchall():
         print(state)
