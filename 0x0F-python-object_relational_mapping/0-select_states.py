@@ -8,7 +8,7 @@ if __name__ == "__main__":
     user = sys.argv[1]
     pwd = sys.argv[2]
     db = sys.argv[3]
-    conn = MySQLdb.connect(user,pwd,db)
+    conn = MySQLdb.connect(user, pwd, db)
     csr = conn.cursor()
     csr.execute("SELECT * FROM 'states'")
     for state in csr.fetchall():
