@@ -15,8 +15,9 @@ if __name__ == "__main__":
         sys.argv[3]),
         pool_pre_ping=True)
     session = Session(bind=engine)
-    for state_obj in session.query(State):
-        if state_obj.name == sys.argv[4]:
+    for state_obj in \
+            session.query(State).filter(State.name == sys.argv[4]).first():
+        if state_obj.name is not None:
             print("{}".format(state_obj.id))
             break
         else:
