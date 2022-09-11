@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Adds the State object “Louisiana” to the database hbtn_0e_6_usa
+"""changes the name of a State object from the database hbtn_0e_6_usa
 """
 
 import sys
@@ -14,6 +14,7 @@ if __name__ == "__main__":
         sys.argv[3]),
         pool_pre_ping=True)
     session = Session(bind=engine)
-    obj = session.query(State).filter_by(id=2).first()
-    obj.name = "New Mexico"
+    session.query(State).filter(State.id == 2).update(
+        {State.name: "New Mexico"}, synchronize_session=False)
+    session.commit()
     session.close()
