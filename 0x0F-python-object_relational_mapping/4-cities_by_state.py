@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Lists all states starting with 'N' from the database hbtn_0e_0_usa"""
+"""Lists all cities from the database hbtn_0e_0_usa"""
 import sys
 import MySQLdb
 

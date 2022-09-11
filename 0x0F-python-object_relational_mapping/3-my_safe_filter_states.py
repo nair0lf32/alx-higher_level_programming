@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""Lists all states starting with 'N' from the database hbtn_0e_0_usa"""
+"""Lists all states matching user
+input filter from the database hbtn_0e_0_usa
+fixing sql injection in task 2"""
 import sys
 import MySQLdb
 
