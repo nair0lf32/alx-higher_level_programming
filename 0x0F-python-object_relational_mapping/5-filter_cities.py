@@ -13,5 +13,5 @@ if __name__ == "__main__":
     csr.execute("SELECT cities.name FROM cities INNER JOIN states \
         ON cities.state_id = states.id ORDER BY states.id ASC")
     for city in csr.fetchall():
-        if city == sys.argv[4]:
-            print(", ".join(city))
+        if city[1] == sys.argv[4]:
+            print(", ".join(city[0]))
