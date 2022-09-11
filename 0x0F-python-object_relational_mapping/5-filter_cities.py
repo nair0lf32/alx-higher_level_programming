@@ -10,8 +10,7 @@ if __name__ == "__main__":
     db = sys.argv[3]
     conn = MySQLdb.connect(user=user, passwd=pwd, db=db)
     csr = conn.cursor()
-    csr.execute("SELECT cities.id, cities.name, states.name \
-        FROM cities INNER JOIN states \
+    csr.execute("SELECT cities.name FROM cities INNER JOIN states \
         ON cities.state_id = states.id ORDER BY states.id ASC")
     for city in csr.fetchall():
         if city[4] == sys.argv[4]:
