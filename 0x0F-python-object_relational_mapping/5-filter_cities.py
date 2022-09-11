@@ -8,10 +8,11 @@ if __name__ == "__main__":
     user = sys.argv[1]
     pwd = sys.argv[2]
     db = sys.argv[3]
+    state_name = sys.argv[4]
     conn = MySQLdb.connect(user=user, passwd=pwd, db=db)
     csr = conn.cursor()
-    csr.execute("SELECT * FROM cities INNER JOIN states \
-        ON cities.state_id = states.id ORDER BY cities.id ASC")
+    csr.execute("SELECT cities.name FROM cities INNER JOIN states \
+        ON cities.state_id = states.id WHERE states.name = {} \
+        ORDER BY cities.id ASC".format(state_name))
     for city in csr.fetchall():
-        if city[4] == sys.argv[4]:
-            print(", ".join(city[2]))
+        print(", ".join(city[0]))
