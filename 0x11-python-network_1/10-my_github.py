@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """
 Uses the GitHub API to display a GitHub id based on given credentials
