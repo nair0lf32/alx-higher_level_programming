@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" 
+"""
 Sends a request to the given url and displays the body of the response
 """
 import sys
