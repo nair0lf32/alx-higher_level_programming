@@ -3,7 +3,7 @@
 Displays the X-Request-Id response header value
 """
 import sys
-import urllib
+import urllib.request
 
 if __name__ == "__main__":
     url = sys.argv[1]
